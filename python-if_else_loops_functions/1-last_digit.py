@@ -7,7 +7,7 @@ def last_digit(n):
 	if num < 0:
 		return num * -1
 	else:
-		num
+		return num
 
 print(f"Last digit of {number} is {last_digit(number)}" end=' ')
 
