@@ -9,7 +9,7 @@ def last_digit(n):
 	else:
 		return num
 
-print(f"Last digit of {number} is {last_digit(number)}" end=' ')
+print(f"Last digit of {number} is {last_digit(number)}", end=' ')
 
 if last_digit(number) > 5:
     print("and is greater than 5")
