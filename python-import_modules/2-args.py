@@ -8,4 +8,4 @@ if __name__ == "__main__":
     else:
         print("{} arguments:".format(len(sys.argv)))
 for index in range(1, len(sys.argv)):
-        print("{}: {}".format(index, sys.argv[index]))
+        print("{}: {}".format(index, sys.argv[index] + 1))
