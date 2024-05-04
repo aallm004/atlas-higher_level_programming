@@ -7,5 +7,3 @@ def max_integer(my_list=[]):
         if i >= res:
             res = i
     return res
-
-
