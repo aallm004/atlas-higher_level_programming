@@ -1,9 +1,9 @@
 #!/usr/bin/python3
 def simple_delete(a_dictionary, key=""):
-    c = False
+    i = False
     for k in a_dictionary:
         if k == key:
-            c = True
-    if c:
+            i = True
+    if i:
         del a_dictionary[key]
         return(a_dictionary)
