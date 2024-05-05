@@ -1,7 +1,7 @@
 #!/usr/bin/python3
-def search_replace(my_list, search, replace):
-    replace_function = lambda x: replace if x == search else x
+def uniq_add(my_list=[]):
 
-    new_list = list(map(replace_function, my_list))
+    unique_elements = set(my_list)
 
-    return new_list
+    total = sum(unique_elements)
+    return total
