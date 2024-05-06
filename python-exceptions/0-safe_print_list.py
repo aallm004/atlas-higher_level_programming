@@ -7,10 +7,9 @@ def safe_print_list(my_list=[], x=0):
         try:
             print(element, end=' ')
             printed_el += 1
-        except: IndexError
-        print(f"An error occurred: {element}")
-        
-        print()
+        except IndexError:
+            print(f"An error occurred: {element}")
+
     return printed_el
 
 
