@@ -1,13 +1,13 @@
 #!/usr/bin/python3
 def safe_print_list(my_list=[], x=0):
-
-    printed_el = 0
-
-    for element in my_list:
-        try:
+    
+    try:
+        print_el = 0
+        for element in my_list:
             print(element, end='')
-            printed_el += 1
-        except IndexError:
-            print(f"An error occurred: {element}")
+            print_el += 1
 
-    return printed_el
+    except IndexError:
+            print(f"An error occurred: {element}")
+    print()
+    return print_el
