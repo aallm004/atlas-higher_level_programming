@@ -29,7 +29,7 @@ class Square:
             raise TypeError("size must be an integer")
         if value < 0:
             raise ValueError("size must be >= 0")
-                                     
+
     def my_print(self):
         """prints rectangles with # and new line if"""
         if self.__size == 0:
@@ -51,4 +51,3 @@ class Square:
         if any(type(i) != int for i in value) or any(k < 0 for k in value):
             raise TypeError("position must be a tuple of 2 positive integers")
         self.__position = value
-
