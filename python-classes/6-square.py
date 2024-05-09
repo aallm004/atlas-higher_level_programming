@@ -7,6 +7,10 @@ class Square:
     def __init__(self, size=0, position=(0, 0)):
         self.size = size
         self.position = position
+        
+    def area(self):
+        """Returns current square area"""
+        return self.__size ** 2
 
     @property
     def size(self):
@@ -20,16 +24,11 @@ class Square:
     @size.setter
     def size(self, value):
         """Setter to set property of size"""
+        self.__size = value
         if not isinstance(value, int):
             raise TypeError("size must be an integer")
-        elif value < 0:
+        if value < 0:
             raise ValueError("size must be >= 0")
-        else:
-            self.__size = value
-    
-    def area(self):
-        """Returns current square area"""
-        return self.__size ** 2
                                      
     def my_print(self):
         """prints rectangles with # and new line if"""
@@ -39,9 +38,9 @@ class Square:
             for x in range(self._position[1]):
                 print()
             for y in range(self.__size):
-                for a in range(self.position[0]):
+                for a in range(self.__position[0]):
                     print(" ", end="")
-                for b in range(self.size):
+                for b in range(self.__size):
                     print("#", end="")
                 print()
 
