@@ -31,10 +31,10 @@ class Square:
         self.__size = value
 
     def my_print(self):
-        """prints rectangles with # and new line if nothing"""
+        """prints rectangles with # and new line if"""
         if self.__size == 0:
             print()
             return
-
+    
         for _ in range(self.__size):
             print("#" * self.__size)
