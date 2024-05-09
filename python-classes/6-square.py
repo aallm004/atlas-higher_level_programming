@@ -43,7 +43,7 @@ class Square:
                     print(" ", end="")
                 for b in range(self.size):
                     print("#", end="")
-            print()
+                print()
 
     @position.setter
     def position(self, value):
