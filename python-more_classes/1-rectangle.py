@@ -3,7 +3,7 @@
 
 
 class Rectangle:
-    """Nothing takes place, more code to be written"""
+    """Initialize Rectangle data"""
     def __init__(self, width=0, height=0):
         self.width = width
         self.height = height
@@ -18,7 +18,7 @@ class Rectangle:
         """used to set width"""
         self.__width = value
     if not isinstance(value, int):
-        raise TypeError("height must be an integer")
+        raise TypeError("width must be an integer")
     if width < 0:
         raise ValueError("width ust be >= 0")
 
