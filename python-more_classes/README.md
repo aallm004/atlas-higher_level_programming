@@ -1,4 +1,4 @@
-#Python - More Classes and Objects
+<h1>Python - More Classes and Objects
 |TASK NUMBER|TASK GOAL|
 |-----------|---------|
 |Task #0| Write an empty class Rectangle that defines a rectangle. | 
