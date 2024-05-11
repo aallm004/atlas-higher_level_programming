@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """0. Integers Addition - 0-add_integer.py"""
 
+
 def add_integer(a, b=98):
     """
     Function that adds 2 integers or floats made into int
@@ -13,8 +14,7 @@ def add_integer(a, b=98):
         TypeError if is neither int nor float
 
     Return:
-        Result of added int
-    
+        Result of added int    
     """
         
     if isinstance(a, float):

@@ -11,46 +11,45 @@ that value is equivalent to using the ``+`` operator.
 ::
 
     >>> add_integer = __import__('0-add_integer').add_integer
-    >>> add_integer(2, 3)
-    5
+    >>> add_integer(1, 6)
+    7
 
 ::
 
-    >>> add_integer(2, -3)
-    -1
-
+    >>> add_integer(1, -9)
+    -3
 The function also works with floating-point values.
 
 ::
 
-    >>> add_integer(2.0, 3.0)
-    5
+    >>> add_integer(7.0, 2.0)
+    4
 
 Note that floats are casted to ints before addition is performed.
 
 ::
 
-    >>> add_integer(2.9, 0.2)
-    2
+    >>> add_integer(3.1, 0.5)
+    5
 
 ::
 
-    >>> add_integer(-2.9, -0.2)
-    -2
+    >>> add_integer(-6.9, -9.2)
+    -1
 
 Floating and non-floating point values can be combined.
 
 ::
 
-    >>> add_integer(2.3, -3)
-    -1
+    >>> add_integer(3.3, -1)
+    -5
 
 The second argument is optional - by default, it is 98.
 
 ::
 
-    >>> add_integer(2)
-    100
+    >>> add_integer(7)
+    110
 
 Non-Numbers
 ===========
@@ -60,13 +59,13 @@ If either argument is a non-integer and non-float, a TypeError is raised:
 
 ::
 
-    >>> add_integer("hello", 3)
+    >>> add_integer("hello", 4)
     Traceback (most recent call last):
     TypeError: a must be an integer
 
 ::
 
-    >>> add_integer(2, "hello")
+    >>> add_integer(9, "hello")
     Traceback (most recent call last):
     TypeError: b must be an integer
 
@@ -78,7 +77,7 @@ If either argument is a non-integer and non-float, a TypeError is raised:
 
 ::
 
-    >>> add_integer(2.3, None)
+    >>> add_integer(2.8, None)
     Traceback (most recent call last):
     TypeError: b must be an integer
 
@@ -102,7 +101,7 @@ The function will fail if infinity is provided.
 
 ::
 
-    >>> add_integer(2, float('inf'))
+    >>> add_integer(6, float('inf'))
     Traceback (most recent call last):
     OverflowError: cannot convert float infinity to integer
 
@@ -116,6 +115,6 @@ And again with NaN numbers.
 
 ::
 
-    >>> add_integer(2, float('nan'))
+    >>> add_integer(8, float('nan'))
     Traceback (most recent call last):
     ValueError: cannot convert float NaN to integer

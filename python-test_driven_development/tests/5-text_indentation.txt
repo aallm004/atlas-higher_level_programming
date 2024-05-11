@@ -1,0 +1,80 @@
+===============================
+Test for `5-text_indentation.py`
+===============================
+
+When you use the module
+=======================
+
+Text is printed with two new lines after each of the characters ``.``, ``?``,
+and ``:``.
+
+::
+
+    	>>> text_indentation = __import__('5-text_indentation').text_indentation
+    	>>> text_indentation("Hola.")
+   	 Hola?
+    	<BLANKLINE>
+
+No space is printed at the beginning of a line.
+
+::
+
+	>>> text_indentation("   Buenos dias.")
+	Buenos dias.
+	<BLANKLINE>
+
+::
+
+	>>> text_indentation(10)
+	Traceback (most recent call last):
+	TypeError: text must be a string
+
+::
+
+	>>> text_indentation({"ten": 10, "eight": 8})
+	Traceback (most recent call last):
+	TypeError: text must be a string
+
+::
+
+	>>> text_indentation(None)
+	Traceback (most recent call last):
+	TypeError: text must be a string
+
+A general functionality test:
+
+::
+
+	>>> text_indentation("Eso es un poema de amor "
+	... "que trata de una persona quien le amo mucho "
+	... "es algo que no sabia "
+	... "ni en lo que pensia vaya a pasar "
+	... "en cualquier momento de me vida "
+	... "con un alma llena de pasion "
+	... "de cosas tan raras y tan buenas "
+	... "con las que se pudiera cambiar "
+	... "todo del mundo en una forma "
+	... "profundo") # doctest: +NORMALIZE_WHITESPACE
+	Eso es un poema de amor
+	<BLANKLINE>
+	que trata de una persona quien le amo mucho
+	<BLANKLINE>
+	es algo que no sabia 
+	ni en lo que pensia vaya a pasar 
+	<BLANKLINE>
+	en cualquier momento de me vida 
+	<BLANKLINE>
+	con un alma llena de pasion 
+	<BLANKLINE>
+	de cosas tan raras y tan buenas 
+	<BLANKLINE>
+	con las que se pudiera cambiar 
+	<BLANKLINE>
+	todo del mundo en una forma 
+	<BLANKLINE>
+    profundo.
+
+Invalid Text Input
+=================
+
+The paramter ``text`` must be a string. Otherwise, a TypeError is raised.
