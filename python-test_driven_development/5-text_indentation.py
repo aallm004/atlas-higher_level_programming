@@ -30,5 +30,5 @@ def text_indentation(text):
             new += text[i]
             new += "\n\n"
         else:
-            new =+ text[i]
+            new += text[i]
     print(new, end="")
