@@ -30,4 +30,5 @@ def say_my_name(first_name, last_name=""):
         """Checking to see if the last_name is a string"""
         raise TypeError("last_name must be a string")
 
-    return f"My name is {first_name} {last_name}"
+    print(("My name is {:s} {:s}".format(first_name, last_name)))
+    """Printing first_name and last_name"""
