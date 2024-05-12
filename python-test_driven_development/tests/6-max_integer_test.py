@@ -1,59 +1,51 @@
 #!/usr/bin/python3
-'''This module uses unittest to test the module `6-max_integer.py`'''
+"""Unittest for max_integer([..])
+"""
 import unittest
 max_integer = __import__('6-max_integer').max_integer
 
 
 class TestMaxInteger(unittest.TestCase):
-    '''tests module 6-max_integer.py with multiple function tests'''
-    def test_floats(self):
-        """Testing a list of floats."""
-        floats = [1.23, 4.56, -7.898, 76.5, 43.0]
-        self.assertEqual(max_integer(floats), 21.0)
+    """
+    Class for testing max_integer function
+    """
+    def test_max_integer(self):
+        """Positive ints"""
+        test_list = [32, 5, 6, 12, 1, 17, 99]
+        self.assertEqual(max_integer(test_list), 99)
 
-    def test_ints_and_floats(self):
-        """Testing a list containing ints and floats."""
-        ints_and_floats = [12.3, 4.56, -7, 89, 10]
-        self.assertEqual(max_integer(ints_and_floats), 98.7)
 
-    def test_string(self):
-        """Testing  for a string."""
-        string = "Abigail"
-        self.assertEqual(max_integer(string), 'a')
+    def test_max_at_beginning(self):
+        """Positive ints with max at beginning"""
+        test_list = [99, 1, 6, 2, 88, 33]
+        self.assertEqual(max_integer(test_list), 99)
 
-    def test_ordered_list(self):
-        """Testing an ordered list of integers."""
-        ordered = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
-        self.assertEqual(max_integer(ordered), 10)
 
-    def test_unordered_list(self):
-        """Testing an unordered list of integers."""
-        unordered = [2, 4, 6, 3, 1, 8, 10, 9, 5]
-        self.assertEqual(max_integer(unordered), 10)
+    def test_max_in_middle(self):
+        """Positive ints with max in middle"""
+        test_list = [5, 99, 1]
+        self.assertEqual(max_integer(test_list), 99)
 
-    def test_max_at_begginning(self):
-        """Testing a list with a beginning max value."""
-        max_at_beginning = [10, 6, 8, 2, 4, 3, 5]
-        self.assertEqual(max_integer(max_at_beginning), 10)
+
+    def test_one_negative_number(self):
+        """One negative number"""
+        test_list = [1, 5, 99, -12, 55]
+        self.assertEqual(max_integer(test_list), 99)
+
+
+    def test_only_negative_numbers(self):
+        """Only negative numbers"""
+        test_list = [-99, -12, -55, -2, -9]
+        self.assertEqual(max_integer(test_list), -2)
+
+
+    def test_only_one_element(self):
+        """Only one element"""
+        test_list = [99]
+        self.assertEqual(max_integer(test_list), 99)
+
 
     def test_empty_list(self):
-        """Testing an empty list."""
-        empty = []
-        self.assertEqual(max_integer(empty), None)
-
-    def test_one_element_list(self):
-        """Testing a list with a single element."""
-        one_element = [2]
-        self.assertEqual(max_integer(one_element), 2)
-
-    def test_list_of_strings(self):
-        """Testing a list of strings."""
-        strings = ["It", "is", "a", "beautiful" "day"]
-        self.assertEqual(max_integer(strings), "day")
-
-    def test_empty_string(self):
-        """Testing an empty string."""
-        self.assertEqual(max_integer(""), None)
-
-if __name__ == '__main__':
-    unittest.main()
+        """Empty list"""
+        test_list = []
+        self.assertEqual(max_integer(test_list), None)
