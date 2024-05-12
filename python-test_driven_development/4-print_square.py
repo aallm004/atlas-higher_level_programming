@@ -6,7 +6,6 @@ Functions:
     def print_square(size)
 """
 
-
 def print_square(size):
 
 
