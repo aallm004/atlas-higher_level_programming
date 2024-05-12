@@ -21,6 +21,7 @@ represents the height and width of the square.
     #####
     #####
     #####
+    #####
 
 ::
 
