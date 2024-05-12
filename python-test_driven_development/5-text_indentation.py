@@ -27,7 +27,6 @@ def text_indentation(text):
     new = ""
     for i in range(len(text)):
         if text[i] in [".", ":","?"]:
-            new += text[i].replace(' ', '') + "\n"
             new += text[i]
             new += "\n\n"
         else:
