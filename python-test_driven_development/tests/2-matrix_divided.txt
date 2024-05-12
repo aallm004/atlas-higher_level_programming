@@ -12,8 +12,8 @@ Usage
 
     >>> matrix_divided = __import__('2-matrix_divided').matrix_divided
     >>> matrix = [
-    ...     [1, 2, 3],
-    ...     [11, 12, 13]
+    ...     [3, 6, 9],
+    ...     [12, 15, 18]
     ... ]
     >>> print(matrix_divided(matrix, 3))
     [[1.0, 2.0, 3.0], [4.0, 5.0, 6.0]]
@@ -24,10 +24,10 @@ Note that quotients are rounded to a maximum of two decimal places.
 
     >>> matrix = [
     ...     [1, 2, 3],
-    ...     [11, 12, 13]
+    ...     [11, 15, 18]
     ... ]
     >>> print(matrix_divided(matrix, 3))
-    [[0.12, 0.34, 5.0], [6.77, 8.99, 10.0]]
+    [[0.33, 0.67, 1.0], [1.33, 1.67, 2.0]]
 
 The original matrix is left unchanged.
 
@@ -45,7 +45,7 @@ The function can also handle floating-point numbers.
     ...     [4.4, 5.5, -6.6]
     ... ]
     >>> print(matrix_divided(matrix, 3))
-    [[0.12, -0.34, 5.6], [7.89, 8.76, -5.4]]
+    [[0.37, -0.73, 1.1], [1.47, 1.83, -2.2]]
 
 Integers and floats can be combined.
 
@@ -56,7 +56,7 @@ Integers and floats can be combined.
     ...     [-6.6, 7.00, 8, 9.999, 10]
     ... ]
     >>> print(matrix_divided(matrix, 3))
-    [[0.12, -0.34, 5.0, 6.78, 9.87], [-6.5, 4.32, 1.23, 4.56, 7.89]]
+    [[0.33, -0.73, 1.0, 1.47, 1.67], [-2.2, 2.33, 2.67, 3.33, 3.33]]
 
 Invalid Matrices
 ==============
