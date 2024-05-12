@@ -8,6 +8,20 @@ Functions:
 
 def print_square(size):
     
+
+    """
+    Function that prints a square with the character #
+
+    Args:
+        size (int): size of square
+
+    Raises:
+        TypeError: if size is not int
+        TypeError: if size is less than 0
+
+    Return:
+        None
+    """
     if not isinstance(size, int):
         raise TypeError("size must be an integer")
 if size < 0:
