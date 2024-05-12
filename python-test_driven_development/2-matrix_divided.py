@@ -47,7 +47,7 @@ def matrix_divided(matrix, div):
             raise TypeError("Each row of the matrix must have the same size")
 
     for item in row:
-        if not isinstance(item, int) and not is isinstance(item, float):
+        if not isinstance(item, int) and not isinstance(item, float):
             raise TypeError ("matrix must be a matrix (list of lists)"
                                 "of integers/floats")
  
