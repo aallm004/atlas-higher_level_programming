@@ -25,9 +25,9 @@ def text_indentation(text):
     if not isinstance(text, str):
         raise TypeError("text must be a string")
     new = ""
-    for i in range(len(text)):
-        if text[i] in [".", ":","?"]:
-            new += text[i]
+    for char in range(len(text)):
+        if char in [".", ":","?"]:
+            new += char
             new += "\n\n"
         else:
             new += text[i]
