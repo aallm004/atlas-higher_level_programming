@@ -46,11 +46,11 @@ def matrix_divided(matrix, div):
         elif len(row) is not length:
             raise TypeError("Each row of the matrix must have the same size")
 
-    for item in row:
-        if not isinstance(item, int) and not isinstance(item, float):
-            raise TypeError ("matrix must be a matrix (list of lists)"
+        for item in row:
+            if not isinstance(item, int) and not isinstance(item, float):
+                raise TypeError ("matrix must be a matrix (list of lists)"
                                 "of integers/floats")
  
-        newRow.append(round(item / div, 2))
-    newMatrix.append(newRow)
-    return newMatrix
+            newRow.append(round(item / div, 2))
+        newMatrix.append(newRow)
+        return newMatrix
