@@ -38,13 +38,13 @@ def matrix_divided(matrix, div):
 
     for row in matrix:
         newRow = []
-        row_len = len(matrix[0])
+    
         if type(row) is not list:
             raise TypeError("matrix must be a matrix (list of lists) of integers/floats")
 
         if length is 0:
             lenth = len(row)
-        elif (len(matrix[row]) != row_len):
+        elif len(row) is not length:
             raise TypeError("Each row of the matrix must have the same size")
 
         for item in row:
