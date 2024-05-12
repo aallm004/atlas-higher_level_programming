@@ -10,7 +10,18 @@ Return:
 """
 
 def text_indentation(text):
+    """
+    Function that prints a text with 22 new lines after .?:
 
+    Args:
+        text: text used
+
+    Raises:
+        TypeError: if text is not a string
+
+    Return:
+        Only print
+    """
     if not isinstance(text, str):
         raise TypeError("text must be a string")
     new = ""
