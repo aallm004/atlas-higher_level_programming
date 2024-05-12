@@ -48,7 +48,8 @@ def matrix_divided(matrix, div):
 
     for item in row:
         if not isinstance(item, int) and not is isinstance(item, float):
-            raise TypeError ("matrix must be a matrix (list of lists) of integers/floats")
+            raise TypeError ("matrix must be a matrix (list of lists)"
+                                "of integers/floats")
  
         newRow.append(round(item / div, 2))
     newMatrix.append(newRow)
