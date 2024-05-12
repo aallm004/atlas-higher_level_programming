@@ -1,5 +1,5 @@
 ================================================
-This file is a test for the ``2-matrix``
+This file is a test for the ``2-matrix_divided.py``
 ================================================
 
 Usage
