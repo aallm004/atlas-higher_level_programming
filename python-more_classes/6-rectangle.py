@@ -14,7 +14,7 @@ class Rectangle:
     @property
     def width(self):
         """used to retrieve width"""
-        return self.__width
+        return self._width
 
     @width.setter
     def width(self, value):
@@ -25,41 +25,41 @@ class Rectangle:
         elif value < 0:
             raise ValueError("width must be >= 0")
         else:
-            self.__width = int(value)
+            self._width = int(value)
 
     @property
     def height(self):
         """used to retrieve height"""
-        return self.__height
+        return self._height
 
     @height.setter
     def height(self, value):
         """used to set height"""
-        self.__height = value
+        self._height = value
         if not isinstance(value, int):
             raise TypeError("height must be an integer")
         elif value < 0:
             raise ValueError("height must be >= 0")
         else:
-            self.__height = int(value)
+            self._height = int(value)
 
     def area(self):
-        return self.width * self.height
+        return self._width * self._height
 
     def perimeter(self):
-        if self.width == 0 or self.height == 0:
+        if self._width == 0 or self._height == 0:
             return 0
         else:
             return 2 * (self._width + self._height)
 
     def __str__(self):
-        if self.width == 0 or self.height == 0:
+        if self._width == 0 or self._height == 0:
             return ""
         else:
             string = ""
-            for x in range(self.height):
-                string += "#" * self.width
-                if x < self.height - 1:
+            for x in range(self._height):
+                string += "#" * self._width
+                if x < self._height - 1:
                     string += "\n"
             return string
 
