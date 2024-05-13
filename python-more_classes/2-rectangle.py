@@ -5,8 +5,8 @@
 class Rectangle:
     """Initialize Rectangle data"""
     def __init__(self, width=0, height=0):
-        self.width = width
-        self.height = height
+        self._width = width
+        self._height = height
 
     @property
     def width(self):
@@ -37,9 +37,11 @@ class Rectangle:
             raise ValueError("height must be >= 0")
         
     def area(self):
-    """returns current square area"""
-    return self.width *self.height
+        return self.width * self.height
     
     def perimeter(self):
-        
+        if self.width == 0 or self.height == 0:
+            return 0
+        else:
+            return 2 * (self._width + self._height)
 
