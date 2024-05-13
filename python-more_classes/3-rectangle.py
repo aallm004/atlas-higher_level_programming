@@ -59,4 +59,4 @@ class Rectangle:
                 string += "#" * self.width
                 if x < self.height - 1:
                     string += "\n"
-                return string
+            return string
