@@ -5,13 +5,13 @@
 class Rectangle:
     """Initialize Rectangle data"""
     def __init__(self, width=0, height=0):
-        self._width = width
-        self._height = height
+        self.width = width
+        self.height = height
 
     @property
     def width(self):
         """used to retrieve width"""
-        return self._width
+        return self.__width
 
     @width.setter
     def width(self, value):
@@ -19,8 +19,10 @@ class Rectangle:
         self._width = value
         if not isinstance(value, int):
             raise TypeError("width must be an integer")
-        if value < 0:
+        elif value < 0:
             raise ValueError("width must be >= 0")
+        else:
+            self.__width = int(value)
 
     @property
     def height(self):
@@ -33,8 +35,10 @@ class Rectangle:
         self._height = value
         if not isinstance(value, int):
             raise TypeError("height must be an integer")
-        if value < 0:
+        elif value < 0:
             raise ValueError("height must be >= 0")
+        else:
+            self.__height = int(value)
         
     def area(self):
         return self.width * self.height
