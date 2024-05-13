@@ -1,11 +1,11 @@
 #!/usr/bin/python3
-"""New class called that defines a Rectangle"""
+"""Class Rectangle which has various attributes"""
 
 
 class Rectangle:
     """Class Rectangle which defines a rectangle"""
     number_of_instances = 0
-    
+
     """Initialize Rectangle data"""
     def __init__(self, width=0, height=0):
         self.width = width
