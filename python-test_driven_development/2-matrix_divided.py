@@ -54,6 +54,6 @@ def matrix_divided(matrix, div):
                                 "of integers/floats")
 
         for row in matrix:
-        newRow.append(round(item / div, 2))
-        newMatrix.append(newRow)
+            newRow.append = [round(item / div, 2) for element in row]
+            newMatrix.append(newRow)
     return newMatrix
