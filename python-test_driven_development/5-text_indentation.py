@@ -9,6 +9,7 @@ Return:
     Only print
 """
 
+
 def text_indentation(text):
     """
     Function that prints a text 
@@ -22,8 +23,7 @@ def text_indentation(text):
     Return:
         Only print
     """
-    text = text.strip()
-
+    
     if not isinstance(text, str):
         raise TypeError("text must be a string")
     new = ""
