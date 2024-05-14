@@ -34,4 +34,4 @@ def say_my_name(first_name, last_name=""):
         print("My name is {} {}".format(first_name, last_name))
         """Printing first_name and last_name"""
     else:
-        print("My name is {} ".format(first_name))
+        print("My name is {}".format(first_name))
