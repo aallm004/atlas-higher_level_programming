@@ -48,7 +48,7 @@ a TypeError is raised.
 
     #last_name must be a string
     >>> say_my_name("George", 10)
-    Traceback (most resent call last):
+    Traceback (most recent call last):
     TypeError: last_name must be a string
 
 ::
