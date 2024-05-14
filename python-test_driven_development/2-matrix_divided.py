@@ -3,7 +3,7 @@
 
 
 def matrix_divided(matrix, div):
-    
+
     """
     Function that divides all elements of a matrix
 
@@ -16,11 +16,11 @@ def matrix_divided(matrix, div):
         ZeroDivisionError if an int is 0
 
     Return:
-        Result of divided    
+        Result of divided matrix
     """
     length = 0
     newMatrix = []
-    
+
     if len(matrix):
         if not isinstance(div, int) and not isinstance(div, float):
             raise TypeError("div must be a number")
