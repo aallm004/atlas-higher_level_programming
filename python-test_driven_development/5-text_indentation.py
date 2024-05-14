@@ -27,16 +27,11 @@ def text_indentation(text):
     if not isinstance(text, str):
         raise TypeError("text must be a string")
     new = ""
-    count = 0
     for i in range(len(text)):
         if text[i] in [".", ":","?"]:
             new += text[i]
             new += "\n\n"
         else:
             new += text[i]
-
-        while count < len(text) and text[count] == " ":
-                count = count + 1
-        continue
 
     print(new, end="")
