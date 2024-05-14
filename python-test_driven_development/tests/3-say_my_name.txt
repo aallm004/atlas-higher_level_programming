@@ -49,7 +49,7 @@ a TypeError is raised.
     #last_name must be a string
     >>> say_my_name("George", 10)
     Traceback (most resent call last):
-    TypeError last_name must be a string
+    TypeError: last_name must be a string
 
 ::
     #no info provided
