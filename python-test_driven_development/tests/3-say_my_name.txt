@@ -47,7 +47,7 @@ a TypeError is raised.
     TypeError: first_name must be a string
 
     #last_name must be a string
-    >>> say_my_name(10, "George")
+    >>> say_my_name("George", 10)
     Traceback (most resent call last):
     TypeError first_name must be a string
 
