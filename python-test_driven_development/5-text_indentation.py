@@ -22,7 +22,7 @@ def text_indentation(text):
     Return:
         Only print
     """
-    text = .lstrip(text)
+    text = .strip(text)
 
     if not isinstance(text, str):
         raise TypeError("text must be a string")
