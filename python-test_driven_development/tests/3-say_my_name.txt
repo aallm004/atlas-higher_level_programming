@@ -12,17 +12,20 @@ Usage
     >>> say_my_name = __import__('3-say_my_name').say_my_name
     
 ::    
-    # CONCATS
+    
     >>> say_my_name("Abigail", "Aleman")
     My name is Abigail Aleman
 
 ::
 
+    >>> say_my_name("Cornelius Maxwell", "James II")
+    My name is Cornelius Maxwell James II
+
 The parameter ```last_name``` is optional. If no last name is provided,
 an empty string is printed instead.
 
 ::
-    #NO LAST_NAME
+
     >>> say_my_name("Lola")
     My name is Lola 
     
@@ -33,20 +36,30 @@ The parameters ``first_name`` and ``last_name``` must be strings. Otherwise,
 a TypeError is raised.
 
 ::
-    #NONSTRING
+
     >>> say_my_name(6, "Abs")
     Traceback (most recent call last):
     TypeError: first_name must be a string
 
 ::
-    #NOTHING GIVEN
-    >>> say_my_name(None)
+
+    >>> say_my_name("Aleman", ["John", "Frank", "Maybe"])
+    Traceback (most recent call last):
+    TypeError: last_name must be a string
+
+::
+
+    >>> say_my_name({"Aleman": 6, "Abigail": 23}, 7.7)
     Traceback (most recent call last):
     TypeError: first_name must be a string
 
+    >>> say_my_name(None, "George")
+    Traceback (most resent call last):
+    TypeError first_name must be a string
+
 ::
-    #NO FIRST_NAME
-    >>> say_my_name(None, "Larry")
+
+    >>> say_my_name(None)
     Traceback (most recent call last):
     TypeError: first_name must be a string
 
