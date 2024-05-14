@@ -22,11 +22,11 @@ def text_indentation(text):
     Return:
         Only print
     """
-    text = text.strip()
+
 
     if not isinstance(text, str):
         raise TypeError("text must be a string")
-    new = ""
+    new = new.strip("")
     for i in range(len(text)):
         if text[i] in [".", ":","?"]:
             new += text[i]
