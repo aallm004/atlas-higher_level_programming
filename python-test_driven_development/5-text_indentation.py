@@ -35,5 +35,6 @@ def text_indentation(text):
             new += text[i]
 
         for x in range(len(text)):
-        text[x] = text[x].strip()
+            text[x] = text[x].strip()
+            
     print(new, end="")
