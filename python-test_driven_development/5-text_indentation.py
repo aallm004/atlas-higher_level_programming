@@ -23,7 +23,6 @@ def text_indentation(text):
         Only print
     """
 
-
     if not isinstance(text, str):
         raise TypeError("text must be a string")
     new = ""
