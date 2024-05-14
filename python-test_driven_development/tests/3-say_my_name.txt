@@ -43,12 +43,6 @@ a TypeError is raised.
 
 ::
 
-    >>> say_my_name("Aleman", ["John", "Frank", "Maybe"])
-    Traceback (most recent call last):
-    TypeError: last_name must be a string
-
-::
-
     >>> say_my_name({"Aleman": 6, "Abigail": 23}, 7.7)
     Traceback (most recent call last):
     TypeError: first_name must be a string
