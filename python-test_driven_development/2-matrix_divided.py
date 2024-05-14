@@ -3,7 +3,7 @@
 
 
 def matrix_divided(matrix, div):
-
+    
     """
     Function that divides all elements of a matrix
 
@@ -53,5 +53,6 @@ def matrix_divided(matrix, div):
                 raise TypeError ("matrix must be a matrix (list of lists) "
                                 "of integers/floats")
 
-
-    return ([list(map(lambda x: round(x / div, 2), row)) for row in matrix])
+            newRow.append(round(item / div, 2))
+        newMatrix.append(newRow)
+    return newMatrix
