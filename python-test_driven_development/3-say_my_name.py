@@ -6,8 +6,8 @@ Functions:
     say_my_name(first_name, last_name): Prints "My name is <first name> <last name>".
 """
 
-def say_my_name(first_name, last_name=""):
 
+def say_my_name(first_name, last_name=""):
 
     """
     Function that returns a formatted string with the first name and last name
@@ -20,7 +20,7 @@ def say_my_name(first_name, last_name=""):
         TypeError: If first_name and last_name are not strings
 
     Return:
-        str: A formatted string with the first name and last name. 
+        str: A formatted string with the first name and last name.
     """
 
     if not isinstance(first_name, str):
