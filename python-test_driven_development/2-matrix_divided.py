@@ -53,6 +53,5 @@ def matrix_divided(matrix, div):
                 raise TypeError ("matrix must be a matrix (list of lists) "
                                 "of integers/floats")
 
-            newRow.append(round(item / div, 2))
-        newMatrix.append(newRow)
-    return newMatrix
+
+    return ([list(map(lambda x: round(x / div, 2), row)) for row in matrix])
