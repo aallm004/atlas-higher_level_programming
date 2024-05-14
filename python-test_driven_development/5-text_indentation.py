@@ -22,8 +22,8 @@ def text_indentation(text):
     Return:
         Only print
     """
-    text = text.string()
-    
+    text = text.strip()
+
     if not isinstance(text, str):
         raise TypeError("text must be a string")
     new = ""
