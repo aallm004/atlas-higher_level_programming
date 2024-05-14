@@ -28,11 +28,6 @@ Invalid Names
 The parameters ``first_name`` and ``last_name``` must be strings. Otherwise,
 a TypeError is raised.
 
-::
-    #first_name not a string
-    >>> say_my_name(6, "Abs")
-    Traceback (most recent call last):
-    TypeError: first_name must be a string
 
 ::
     #last_name must be string
@@ -46,14 +41,9 @@ a TypeError is raised.
     Traceback (most recent call last):
     TypeError: first_name must be a string
 
-    #last_name must be a string
-    >>> say_my_name("George", 10)
-    Traceback (most recent call last):
-    TypeError: last_name must be a string
-
 ::
     #no info provided
-    >>> say_my_name(None)
+    >>> say_my_name()
     Traceback (most recent call last):
     TypeError: first_name must be a string
 
