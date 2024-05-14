@@ -24,7 +24,7 @@ an empty string is printed instead.
 ::
 
     >>> say_my_name("Lola")
-    My name is Lola
+    My name is Lola 
     
 Invalid Names
 =============
