@@ -11,7 +11,7 @@ Return:
 
 def text_indentation(text):
     """
-    Function that prints a text with 22 new lines after .?:
+    Function that prints a text 
 
     Args:
         text: text used
