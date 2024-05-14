@@ -16,7 +16,7 @@ def matrix_divided(matrix, div):
         ZeroDivisionError if an int is 0
 
     Return:
-        Result of divided matrix
+        Result of divided
     """
     length = 0
     newMatrix = []
@@ -53,8 +53,6 @@ def matrix_divided(matrix, div):
                 raise TypeError ("matrix must be a matrix (list of lists) "
                                 "of integers/floats")
 
-        for row in matrix:
-
-        newRow.append(round(item / div, 2))
+            newRow.append(round(item / div, 2))
         newMatrix.append(newRow)
     return newMatrix
