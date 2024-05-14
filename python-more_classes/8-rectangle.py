@@ -54,24 +54,6 @@ class Rectangle:
         else:
             return 2 * (self._width + self._height)
 
-    def __str__(self):
-        if self._width == 0 or self._height == 0:
-            return ""
-        else:
-            string = ""
-            for x in range(self._height):
-                string += str(self.print_symbol) * self._width
-                if x < self._height - 1:
-                    string += "\n"
-            return string
-
-    def __repr__(self):
-        return "Rectangle({}, {})".format(self.width, self.height)
-
-    def __del__(self):
-        print("Bye rectangle...")
-        Rectangle.number_of_instances -= 1
-
     @staticmethod
     def bigger_or_equal(rect_1, rect_2):
         if not isinstance(rect_1, Rectangle):
@@ -93,3 +75,21 @@ class Rectangle:
             instance of rectangle
         """
         return cls(size, size)
+
+    def __str__(self):
+        if self._width == 0 or self._height == 0:
+            return ""
+        else:
+            string = ""
+            for x in range(self._height):
+                string += str(self.print_symbol) * self._width
+                if x < self._height - 1:
+                    string += "\n"
+            return string
+
+    def __repr__(self):
+        return "Rectangle({}, {})".format(self.width, self.height)
+
+    def __del__(self):
+        print("Bye rectangle...")
+        Rectangle.number_of_instances -= 1
