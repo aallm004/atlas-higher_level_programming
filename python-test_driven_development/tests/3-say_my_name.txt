@@ -47,10 +47,6 @@ a TypeError is raised.
     Traceback (most recent call last):
     TypeError: first_name must be a string
 
-    >>> say_my_name(None, "George")
-    Traceback (most resent call last):
-    TypeError first_name must be 
-
 ::
 
     >>> say_my_name(None)
