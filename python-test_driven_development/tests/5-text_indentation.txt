@@ -58,7 +58,7 @@ A general functionality test:
 	... "de cosas tan raras y tan buenas "
 	... "con las que se pudiera cambiar "
 	... "todo del mundo en una forma: "
-	... "profundo") # doctest: +NORMALIZE_WHITESPACE
+	... "profundo ") # doctest: +NORMALIZE_WHITESPACE
 	Eso es un poema de amor
 	<BLANKLINE>
 	que trata de una persona quien le amo mucho
@@ -76,7 +76,7 @@ A general functionality test:
 	<BLANKLINE>
 	todo del mundo en una forma: 
 	<BLANKLINE>
-    profundo.
+    profundo
 
 Invalid Text Input
 =================
