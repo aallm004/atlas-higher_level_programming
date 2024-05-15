@@ -50,9 +50,9 @@ A general functionality test:
 	... "todo del mundo en una forma: "
 
 	... "profundo ")
-    Eso es un poema de amor
+    Eso es un poema de amor 
 	<BLANKLINE>
-	que trata de una persona quien le amo mucho
+	que trata de una persona quien le amo mucho 
 	<BLANKLINE>
 	es algo que no sabia 
 	ni en lo que pensia vaya a pasar? 
