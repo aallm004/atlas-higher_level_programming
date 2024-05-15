@@ -50,23 +50,23 @@ A general functionality test:
 	... todo del mundo en una forma:
 
 	... profundo.") # doctest: +NORMALIZE_WHITESPACE
-    Eso es un poema de amor 
+    Eso es un poema de amor: 
 	<BLANKLINE>
-	que trata de una persona quien le amo mucho 
+	que trata de una persona quien le amo mucho:
 	<BLANKLINE>
-	es algo que no sabia
+	es algo que no sabia:
     <BLANKLINE>
 	ni en lo que pensia vaya a pasar?
 	<BLANKLINE>
-	en cualquier momento de me vida
+	en cualquier momento de me vida:
 	<BLANKLINE>
-	con un alma llena de pasion
+	con un alma llena de pasion:
 	<BLANKLINE>
-	de cosas tan raras y tan buenas
+	de cosas tan raras y tan buenas:
 	<BLANKLINE>
-	con las que se pudiera cambiar 
+	con las que se pudiera cambiar:
 	<BLANKLINE>
 	todo del mundo en una forma:
 	<BLANKLINE>
-    profundo
+    profundo.
     <BLANKLINE>
