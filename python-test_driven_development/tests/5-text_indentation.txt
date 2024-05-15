@@ -31,7 +31,8 @@ A general functionality test:
 
 ::
 
-	>>> text_indentation("Eso es un poema de amor "
+	>>> text_indentation
+    ("Eso es un poema de amor "
 
 	... "que trata de una persona quien le amo mucho "
 
