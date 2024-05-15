@@ -67,7 +67,7 @@ A general functionality test:
 	<BLANKLINE>
 	todo del mundo en una forma: 
 	<BLANKLINE>
-    profundo
+    profundo 
 
 Invalid Text Input
 =================
