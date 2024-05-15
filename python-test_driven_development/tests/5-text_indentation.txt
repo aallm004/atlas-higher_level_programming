@@ -22,21 +22,34 @@ Traceback (most recent call last):
 TypeError: text must be a string
 
 ::
+#without argument
+>>> text_indentation()
+Traceback (most recent call last):
+TypeError: text_indentation() missing 1 required positional argument: 'text'
 
 A general functionality test:
 
 ::
 
 	>>> text_indentation("Eso es un poema de amor"
-    ... "que trata de una persona quien le amo mucho"
-    ... "es algo que no sabia"
-    ... "ni en lo que pensia vaya a pasar? "
-    ... "en cualquier momento de me vida"
-    ... "con un alma llena de pasion"
-    ... "de cosas tan raras y tan buenas"
-    ... "con las que se pudiera cambiar"
-    ... "todo del mundo en una forma: "
-    ... "profundo ") # doctest: +NORMALIZE_WHITESPACE
+
+	... "que trata de una persona quien le amo mucho"
+
+	... "es algo que no sabia"
+
+	... "ni en lo que pensia vaya a pasar? "
+
+	... "en cualquier momento de me vida"
+
+	... "con un alma llena de pasion"
+
+	... "de cosas tan raras y tan buenas"
+
+	... "con las que se pudiera cambiar"
+
+	... "todo del mundo en una forma: "
+
+	... "profundo ") # doctest: +NORMALIZE_WHITESPACE
     Eso es un poema de amor 
 	<BLANKLINE>
 	que trata de una persona quien le amo mucho 
@@ -53,12 +66,8 @@ A general functionality test:
 	<BLANKLINE>
 	con las que se pudiera cambiar 
 	<BLANKLINE>
-    todo del mundo en una forma:
+	todo del mundo en una forma:
 	<BLANKLINE>
     profundo
     <BLANKLINE>
 
-#without argument
->>> text_indentation()
-Traceback (most recent call last):
-TypeError: text_indentation() missing 1 required positional argument: 'text'
