@@ -10,9 +10,9 @@ and ``:``.
 
 ::
 
-    	>>> text_indentation = __import__('5-text_indentation').text_indentation
-    	>>> text_indentation("Hola.")
-   	 Hola.
+    >>> text_indentation = __import__('5-text_indentation').text_indentation
+    >>> text_indentation("Hola.")
+    Hola.
 
 
 
