@@ -22,10 +22,6 @@ Traceback (most recent call last):
 TypeError: text must be a string
 
 ::
-#without argument
->>> text_indentation()
-Traceback (most recent call last):
-TypeError: text_indentation() missing 1 required positional argument: 'text'
 
 A general functionality test:
 
@@ -70,3 +66,8 @@ A general functionality test:
 	<BLANKLINE>
     profundo
     <BLANKLINE>
+
+#without argument
+>>> text_indentation()
+Traceback (most recent call last):
+TypeError: text_indentation() missing 1 required positional argument: 'text'
