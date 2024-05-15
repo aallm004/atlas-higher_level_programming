@@ -26,12 +26,15 @@ def text_indentation(text):
     
     if not isinstance(text, str):
         raise TypeError("text must be a string")
-    new = ""
-    for i in range(len(text)):
-        if text[i] in [".", ":","?"]:
-            new += text[i]
-            new += "\n\n"
-        else:
-            new += text[i]
 
-    print(new, end="")
+    inst = text.replace(".", ".\n\n")
+    inst = inst.replace(":", ":\n\n")
+    inst = inst.replace("?", "?\n\n")
+    p = inst.splitlines(True)
+    ls_strip = []
+    for l in p:
+        if l == "\n":
+            ls_strip.append("\n")
+        else:
+            ls_strip.append(l.lstrip())
+    print("".join(ls_strip), end="")
