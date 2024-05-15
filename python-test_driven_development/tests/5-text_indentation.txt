@@ -49,7 +49,7 @@ A general functionality test:
 
 	... "todo del mundo en una forma: "
 
-	... "profundo ")
+	... "profundo ") # doctest: +NORMALIZE_WHITESPACE
     Eso es un poema de amor 
 	<BLANKLINE>
 	que trata de una persona quien le amo mucho 
