@@ -1,6 +1,6 @@
 <h1>Python - More Classes and Objects</h1>
 
-<h2>General</h2>
+<h2>General Learning Objectives</h2>
 "*"What is an object
 "*"What is the difference between a class and an object or instance
 "*"What is the difference between immutable object and mutable object
