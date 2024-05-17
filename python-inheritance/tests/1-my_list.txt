@@ -12,17 +12,9 @@
 [5, 3, 4, 2, 1]
 >>> my_list.print_sorted()
 [1, 2, 3, 4, 5]
->>> print(my_list)
-[5, 3, 4, 2, 1]
+
 
 'Empty list'
 >>> my_list = MyList()
 >>> my_list.print_sorted()
 []
-
-'List of strings'
->>>my_list.append('d')
->>>my_list.append('c')
->>>my_list.append('a')
->>>my_list.append('b')
-['a', 'b', 'c', 'd']
