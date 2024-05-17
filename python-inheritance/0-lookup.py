@@ -1,4 +1,5 @@
 #!/usr/bin/python3
+"""define function to return list of available attributes and methods"""
 
 
 def lookup(obj):
@@ -11,5 +12,5 @@ def lookup(obj):
     Returns:
         list
     """
+    
     return dir(obj)
-
