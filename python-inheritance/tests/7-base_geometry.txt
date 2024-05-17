@@ -33,3 +33,53 @@ Traceback (most recent call last):
 ...
 ValueError: age must be greater than 0
 
+'integer_validator("age", -10)'
+>>> bg = BaseGeometry()
+>>> bg.integer_validator("age", -10)
+Traceback (most recent call last):
+...
+ValueError: age must be greater than 0
+
+'integer_validator("age", “4”)'
+>>> bg = BaseGeometry()
+>>> bg.integer_validator("age", "4")
+Traceback (most recent call last):
+...
+TypeError: age must be an integer
+
+'integer_validator("age", (5,))'
+>>> bg = BaseGeometry()
+>>> bg.integer_validator("age", (5,))
+Traceback (most recent call last):
+...
+TypeError: age must be an integer
+
+'integer_validator("age", [8])'
+>>> bg = BaseGeometry()
+>>> bg.integer_validator("age", [8])
+Traceback (most recent call last):
+...
+TypeError: age must be an integer
+
+'integer_validator("age", True)'
+>>> bg = BaseGeometry()
+>>> bg.integer_validator("age", True)
+Traceback (most recent call last):
+...
+TypeError: age must be an integer
+
+'integer_validator("age", {3, 4})'
+>>> bg = BaseGeometry()
+>>> bg.integer_validator("age", {3, 4})
+Traceback (most recent call last):
+...
+TypeError: age must be an integer
+
+'integer_validator("age", None)'
+>>> bg = BaseGeometry()
+>>> bg.integer_validator("age", None)
+Traceback (most recent call last):
+...
+TypeError: age must be an integer
+
+
