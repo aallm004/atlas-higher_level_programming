@@ -4,10 +4,7 @@ Class Square that inherits from Rectangle
 """
 
 
-Rectangle = __import__("9-rectangle.py").Rectangle
-"""Place the import into Rectangle"""
-
-class Square(Rectangle):
+class Square(__import__("9-rectangle.py").Rectangle):
     """
     class of square
     """
