@@ -7,6 +7,9 @@ Class Square that inherits from Rectangle
 Rectangle = __import__("9-rectangle.py").Rectangle
 
 class Square(Rectangle):
+    """
+    class of square
+    """
 
     def __init__(self, size):
         """
@@ -21,4 +24,3 @@ class Square(Rectangle):
         fucntion __str__
         """
         return "[Square] {}/{}".format(self.__size, self.__size)
-7
