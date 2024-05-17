@@ -7,7 +7,7 @@ class Square(__import__('8-rectangle').Rectangle):
     """
     class Square
     """
-    def __init__(self, size)
+    def __init__(self, size):
         """
         func __init__
         """
