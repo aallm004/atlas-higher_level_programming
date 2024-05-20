@@ -1,14 +1,10 @@
 #!/usr/bin/python3
-lookup = __import__('0-lookup').lookup
+read_file = __import__('0-read_file').read_file
 
-class MyClass1(object):
-    pass
+read_file("my_file_0.txt")
 
-class MyClass2(object):
-    my_attr1 = 3
-    def my_meth(self):
-        pass
+guillaume@ubuntu:~/$ cat my_file_0.txt
+We offer a truly innovative approach to education:
+focus on building reliable applications and scalable systems, take on real-world challenges, collaborate with your peers. 
 
-print(lookup(MyClass1))
-print(lookup(MyClass2))
-print(lookup(int))
+A school every software engineer would have dreamt of!
