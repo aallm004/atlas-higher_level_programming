@@ -12,7 +12,6 @@ try:
     i = load_from_json_file("add_item.json")
 except FileNotFoundError:
     pass
-
 for x in range(1, len(sys.argv)):
     i.append(sys.argv[x])
 save_to_json_file(i, "add_item.json")
