@@ -22,5 +22,5 @@ class Student:
             return new_space
 
     def reload_from_json(self, json):
-        for k, v in json.items()
+        for k, v in json.items():
             setattr(self, k v)
