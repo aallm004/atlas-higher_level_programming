@@ -15,4 +15,8 @@ class Student:
         if attrs is None:
             return self.__dict__
         else:
-            return self
+            new_space = {}
+            for k, v in self.__dict__.items():
+                if k in attrs:
+                    new_space[k] = v
+            return new_space
