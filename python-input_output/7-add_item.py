@@ -14,5 +14,5 @@ try:
 except:
     i = []
 for x in range(1, len(sys.argv)):
-    i.append(sys.argv[x-1])
+    i.append(sys.argv[x])
 save_to_json_file(i, "add_item.json")
