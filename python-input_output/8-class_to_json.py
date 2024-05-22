@@ -1,16 +1,15 @@
 #!/usr/bin/python3
 """
-function that returns the dictionary description
-with simple data structure (list, dict, string, int, boolean)
-for JSON serialization of an object
+documentation
 """
+
 
 def class_to_json(obj):
     """
     function that returns the dictionary description
     with simple data structure (list, dict, string, int, boolean)
     for JSON serialization of an object
-    
+
     Args:
         obj: Object to be serialized
 
