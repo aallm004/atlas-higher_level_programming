@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """Base Class"""
 
+
 class Base:
     """Base Class is created"""
 
