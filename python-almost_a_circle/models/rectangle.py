@@ -82,10 +82,10 @@ class Rectangle(Base):
 
     def display(self):
         """print rectangle"""
-        for x in range(0, self.__y):
+        for y in range(0, self.__y):
             print()
         for h in range(0, self.__height):
-            for y in range(0, self.__x):
+            for x in range(0, self.__x):
                 print(" ", end="")
             for w in range(0, self.__width):
                 print("#", end="")
@@ -96,3 +96,13 @@ class Rectangle(Base):
         string += ") " + str(self.__x) + "/" + str(self.__y)
         string += " - " + str(self.__width) + "/" + str(self.__height)
         return string
+
+    def update(self, *args):
+        try:
+            self.id = args[0]
+            self.__width = args[1]
+            self.__height = args[2]
+            self.__x = args[3]
+            self.__y = args[4]
+        except IndexError:
+            pass
