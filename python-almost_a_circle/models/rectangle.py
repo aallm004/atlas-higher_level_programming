@@ -90,5 +90,5 @@ class Rectangle(Base):
     def __str__(self):
         string = "[Rectangle] (" + str(self.id)
         string += ") " + str(self.__x) + "/" + str(self.__y)
-        string += " - " + str(self.__width) + "/" +str(self.__height)
+        string += " - " + str(self.__width) + "/" + str(self.__height)
         return string
