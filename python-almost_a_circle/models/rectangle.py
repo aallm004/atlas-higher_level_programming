@@ -92,12 +92,14 @@ class Rectangle(Base):
             print()
 
     def __str__(self):
+        """this is printing a thing"""
         string = "[Rectangle] (" + str(self.id)
         string += ") " + str(self.__x) + "/" + str(self.__y)
         string += " - " + str(self.__width) + "/" + str(self.__height)
         return string
 
     def update(self, *args):
+        """"update a thing"""
         try:
             self.id = args[0]
             self.__width = args[1]
