@@ -16,13 +16,14 @@ class Rectangle(Base):
         self.__height = height
         self.__x = x
         self.__y = y
+
         super().__init__(id)
 
     @property
     def width(self):
         """used to retrieve width"""
         return self.__width
-    
+
     @width.setter
     def width(self, value):
         """setter to set property of width"""
@@ -36,7 +37,7 @@ class Rectangle(Base):
     def height(self):
         """used to retrieve height"""
         return self.__height
-    
+
     @height.setter
     def height(self, value):
         """setter to set property of height"""
@@ -45,12 +46,12 @@ class Rectangle(Base):
             raise TypeError("height must be an integer")
         if value < 0:
             raise ValueError("height must be >= 0")
-        
+
     @property
     def x(self):
         """used to retrieve x"""
         return self.__x
-       
+
     @x.setter
     def x(self, value):
         """setter to set property of x"""
@@ -59,12 +60,12 @@ class Rectangle(Base):
             raise TypeError("x must be an integer")
         if value < 0:
             raise ValueError("x must be >= 0")
-        
+
     @property
     def y(self):
         """used to retrieve y"""
         return self.__y
-        
+
     @y.setter
     def y(self, value):
         """setter to set property of y"""
