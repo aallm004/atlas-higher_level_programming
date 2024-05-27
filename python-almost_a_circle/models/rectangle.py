@@ -98,7 +98,7 @@ class Rectangle(Base):
         string += " - " + str(self.__width) + "/" + str(self.__height)
         return string
 
-    def update(self, *args):
+    def update(self, *args, **kwargs):
         """"update a thing"""
         try:
             self.id = args[0]
@@ -108,3 +108,15 @@ class Rectangle(Base):
             self.__y = args[4]
         except IndexError:
             pass
+        if kwargs is not None and args is not None:
+            for key, value in kwargs.items():
+                if key == "id":
+                    self.id = value
+                if key == "width":
+                    self.__width = value
+                if key == "height":
+                    self.__height = value
+                if key == "x":
+                    self.__x = value
+                if key == "y":
+                    self.__y = value
