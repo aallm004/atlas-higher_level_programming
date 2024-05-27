@@ -34,5 +34,4 @@ class Base:
         
         list_json = []
         with open(filename, "w", encoding="utf-8") as f:
-            if list_objs is not None:
-                for obj in list_objs:
+            return 
