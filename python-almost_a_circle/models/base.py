@@ -56,3 +56,7 @@ class Base:
 
         obj.update(**dictionary)
         return obj
+
+    def load_from_file(cls):
+        
+        filename = f"{cls.__name__}.json"
