@@ -36,5 +36,6 @@ class Base:
             return
 
     def from_json_string(json_string):
+        """returning list of JSON string"""
 
         return json.dumps(json_string)
