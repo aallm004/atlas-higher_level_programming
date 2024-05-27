@@ -35,7 +35,7 @@ def update(self, *args, **kwargs):
             self.y = args[3]
         except IndexError:
             pass
-        if kwargs is not None and args is None:
+        if kwargs is not None and args is not None:
             for key, value in kwargs.items():
                 if key == "size":
                     self.width = value
