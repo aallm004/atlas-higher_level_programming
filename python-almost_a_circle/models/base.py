@@ -50,7 +50,7 @@ class Base:
 
         obj = cls(1, 1)
 
-        obj.update(**dictionary)
+        obj.update(dictionary)
 
         return obj
 
