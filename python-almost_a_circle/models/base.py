@@ -24,3 +24,8 @@ class Base:
             return "[]"
         else:
             return json.dumps(list_dictionaries)
+
+    @classmethod
+    def save_to_file(cls, list_objs):
+        with open(self, "w", encoding="utf-8") as f:
+            json.dump(list_objs, f)
