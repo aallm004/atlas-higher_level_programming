@@ -41,5 +41,6 @@ class Base:
 
     def from_json_string(json_string):
         """returning list of JSON string"""
-
-        return json.dumps(json_string)
+        if json_string is None:
+            return []
+        return json.loads(json_string)
