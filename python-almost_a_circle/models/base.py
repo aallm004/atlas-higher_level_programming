@@ -25,8 +25,15 @@ class Base:
         else:
             return json.dumps(list_dictionaries)
 
-    @staticmethod
+    @classmethod
     def save_to_file(cls, list_objs):
-        """save to file"""
-        with open(self, "w", encoding="utf-8") as f:
-            json.dump(list_objs, f)
+
+        filename = f"{cls.__name__}.json"
+
+        json_str = cls.to_json_string(list_objs)
+        
+        list_json = []
+        with open(filename, "w", encoding="utf-8") as f:
+            if list_objs is not None:
+                for obj in list_objs
+
