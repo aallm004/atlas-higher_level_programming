@@ -122,6 +122,7 @@ class Rectangle(Base):
                     self.__y = value
 
     def to_dictionary(self):
+        """creates dictionary"""
         new_dict = {"id": self.id,
                     "width": self.width,
                     "height": self.height,

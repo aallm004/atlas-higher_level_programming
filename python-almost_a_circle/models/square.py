@@ -44,6 +44,7 @@ class Square(Rectangle):
                     setattr(self, key, value)
 
     def to_dictionary(self):
+        """creates dictionary"""
         new_dict = {"id": self.id,
                     "width": self.width,
                     "height": self.height,
