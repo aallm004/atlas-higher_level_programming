@@ -32,6 +32,9 @@ class Base:
 
         json_str = cls.to_json_string(list_objs)
         
-        list_json = []
         with open(filename, "w", encoding="utf-8") as f:
-            return 
+            return
+
+    def from_json_string(json_string):
+
+        return json.dumps(json_string)
