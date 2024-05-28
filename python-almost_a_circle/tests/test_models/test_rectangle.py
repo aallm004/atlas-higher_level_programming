@@ -93,8 +93,8 @@ class Test_Rectangle(unittest.TestCase):
             new = Rectangle(10, 0)
 
     def test_area(self):
-        r = Rectangle(20, 20)
-        self.assertEqual(r.area(), 200)
+        r = Rectangle(10, 10)
+        self.assertEqual(r.area(), 100)
 
     def test_str(self):
         Base._Base__nb_objects = 0
@@ -102,23 +102,23 @@ class Test_Rectangle(unittest.TestCase):
         self.assertEqual(str(r),"[Rectangle] (1) 0/0 - 20/20")
 
     def test_display_no_x_no_y(self):
-        r = Rectangle(20, 3)
+        r = Rectangle(10, 2)
         out = "##########\n##########\n"
         with patch('sys.stdout', new=StringIO()) as stdout:
             r.display()
             self.assertEqual(stdout.getvalue(), out)
 
     def test_display_no_x(self):
-        r = Rectangle(20, 3)
-        r.y = 3
+        r = Rectangle(10, 2)
+        r.y = 2
         out = "\n\n##########\n##########\n"
         with patch('sys.stdout', new=StringIO()) as stdout:
             r.display()
             self.assertEqual(stdout.getvalue(), out)
 
     def test_display_no_y(self):
-        r = Rectangle(20, 3)
-        r.x = 3
+        r = Rectangle(10, 2)
+        r.x = 2
         out = "  ##########\n  ##########\n"
         with patch('sys.stdout', new=StringIO()) as stdout:
             r.display()
@@ -166,8 +166,8 @@ class Test_Rectangle(unittest.TestCase):
 
     def test_create_2(self):
         r = Rectangle.create(**{ 'id': 89,
-                                 'width': 3 })
-        self.assertEqual(str(r), "[Rectangle] (89) 0/0 - 3/2")
+                                 'width': 2 })
+        self.assertEqual(str(r), "[Rectangle] (89) 0/0 - 2/1")
 
     def test_create_3(self):
         r = Rectangle.create(**{ 'id': 89,
