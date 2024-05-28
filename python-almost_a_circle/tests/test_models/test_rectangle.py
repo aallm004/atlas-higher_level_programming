@@ -15,9 +15,10 @@ class Test_Rectangle(unittest.TestCase):
 
     def test_new_rectangle(self):
         """can a rectangle exist in this universe"""
+        Base._Base__nb_object = 0
         r1 = Rectangle(2, 3)
         r2 = Rectangle(2, 3)
-        self.assertEqual(r1.id, r2.id - 2)
+        self.assertEqual(r1.id, r2.id - 1)
 
     def test_new_rectangle2(self):
         """another form of testulation"""
@@ -29,9 +30,9 @@ class Test_Rectangle(unittest.TestCase):
         new = Rectangle(2, 3)
         self.assertEqual(new.width, 2)
         self.assertEqual(new.height, 3)
-        self.assertEqual(new.x, 1)
-        self.assertEqual(new.y, 1)
-        self.assertEqual(new.id, 2)
+        self.assertEqual(new.x, 0)
+        self.assertEqual(new.y, 0)
+        self.assertEqual(new.id, 1)
 
     def test_width_not_a_string1(self):
         """no string with width"""
@@ -98,7 +99,7 @@ class Test_Rectangle(unittest.TestCase):
     def test_str(self):
         Base._Base__nb_objects = 0
         r = Rectangle(20, 20)
-        self.assertEqual(str(r),"[Rectangle] (1) 0/0 - 10/10")
+        self.assertEqual(str(r),"[Rectangle] (1) 0/0 - 20/20")
 
     def test_display_no_x_no_y(self):
         r = Rectangle(20, 3)
@@ -157,7 +158,7 @@ class Test_Rectangle(unittest.TestCase):
     def test_update_6(self):
         r = Rectangle(20, 200, 2000, 20000, 2)
         r.update(3, 30, 300, 3000, 30000)
-        self.assertEqual("[Rectangle] (2) 3000/30000 - 30/300", str(r))
+        self.assertEqual("[Rectangle] (3) 3000/30000 - 30/300", str(r))
 
     def test_create_1(self):
         r = Rectangle.create(**{ 'id': 89 })
