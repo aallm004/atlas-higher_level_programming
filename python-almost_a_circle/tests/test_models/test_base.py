@@ -1,3 +1,7 @@
+#!/usr/bin/python3
+"""unittests base.py"""
+
+import os
 import unittest
 from models.base import Base
 from models.rectangle import Rectangle
