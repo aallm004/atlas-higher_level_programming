@@ -1,8 +1,8 @@
 #!/usr/bin/python3
-"""Lists all states from database"""
+"""Fetch and display City objects from the datebase hbtn..."""
 
 import sys
-from model_state import Base, State
+from model_state import Base, State, City
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
 
@@ -17,11 +17,9 @@ if __name__ == "__main__":
     Session = sessionmaker(bind=engine)
     session = Session()
 
-    states_to_delete = session.query(State).filter(State.name.like('%a%')).all()
-    for state in states_to_delete:
-        session.delete(state)
+    cities = session.query(City).order_by(City.id).all
 
-    session.commit()
-    print("Deleted State objects successfully!")
-
+    for city in cities:
+        print("{}: ({}) {}".format(city.state.name, city.id, city.name))
+    
     session.close()
