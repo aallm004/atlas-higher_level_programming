@@ -1,5 +1,4 @@
 #!/usr/bin/python3
-#!/usr/bin/python3
 """Script that takes an arg and disp values in the states table"""
 
 import sys
