@@ -6,18 +6,20 @@ from sqlalchemy.orm import sessionmaker
 import sys
 from model_state import Base, State
 
-def list_states(username, password, db_name):
+if __name__ == "__main__":
+    username = sys.argv[1]
+    password = sys.argv[2]
+    database = sys.argv[3]
 
-    out = "mysql://{}:{}@localhose:3306/{}"
-    engine = create_engine(out.format(username, password, db_name))
-    Base.metadata.create_all(engine)
+    engine = create_engine("mysql://{username}:{password}@localhose:3306/{database}")
+    Base.metadata.bind = engine
 
     Session = sessionmaker(bind=engine)
-
     session = Session()
 
-    states = session.query(State).order_by(State.id).all()
-    for state in states:
-        print(f"{state.id}: {state.name}")
+    states = session.query(State).order_by(State.id.asc()).all()
+    
+    for instance in session.query(State).order_by(State.id):
+        print('{0}: {1}'.format(instance.id, instance.name))
 
-    Session.close()
+    session.close()
