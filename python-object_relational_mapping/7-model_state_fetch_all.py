@@ -1,9 +1,9 @@
 #!/usr/bin/python3
 """Lists all states from database"""
 
-import sys
 from sqlalchemy import (create_engine)
 from sqlalchemy.orm import sessionmaker
+import sys
 from model_state import Base, State
 
 if __name__ == "__main__":
@@ -24,6 +24,6 @@ if __name__ == "__main__":
 
     results = session.query(State).order_by(State.id).all()
     for row in results:
-        print(f"{row.id:} {row.name}")
+        print(f"{row.id}: {row.name}")
 
     Session.close()
