@@ -15,11 +15,9 @@ if __name__ == "__main__":
     Session = sessionmaker(bind=engine)
     session = Session()
 
-    first_state = session.query(State).order_by(State.id).first()
+    states_with_a = session.query(State).filter(State.name.like("%a%")).order_by(State.id).all()
 
-    if first_state:
-        print(f"{first_state.id}: {first_state.name}")
-    else:
-        print("Nothing")
+    for state in states_with_a:
+        print(f"{state.id}: {state.name}")
 
-    session.close
+    session.close()
