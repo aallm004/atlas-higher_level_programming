@@ -12,8 +12,7 @@ if __name__ == "__main__":
 
     cur = db.cursor()
 
-    cur.execute("""SELECT id, name
-                FROM states WHERE name LIKE 'N%' NOT 'n%'""")
+    cur.execute("""SELECT * FROM states WHERE BINARY name LIKE 'N%'""")
 
     results = cur.fetchall()
 
