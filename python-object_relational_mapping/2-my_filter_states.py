@@ -14,7 +14,7 @@ if __name__ == "__main__":
 
     cur.execute("""SELECT * FROM states WHERE
                 BINARY name = '{}' ORDER BY id"""
-                .format(argv[4]))
+                .format(sys.argv[4]))
 
     results = cur.fetchall()
 
