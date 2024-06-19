@@ -8,13 +8,13 @@ from sqlalchemy.orm import sessionmaker
 
 if __name__ == "__main__":
     if len(sys.argv) != 5:
-        print("Usage: {} <mysql_username> <mysql_password> <db_name> <state_name>".\
-              format(sys.argv[0]))
+        print("Usage: {} <mysql_username> <mysql_password> <db_name> \
+              <state_name>".format(sys.argv[0]))
         sys.exit(1)
 
-    username, password, db_name, state_name = sys.argv[1], sys.argv[2],\
+    username, password, db_name, state_name = sys.argv[1], sys.argv[2],
         sys.argv[3], sys.argv[4]
-    engine = create_engine('mysql+mysqldb://{}:{}@localhost/{}'.\
+    engine = create_engine('mysql+mysqldb://{}:{}@localhost/{}'.
                            format(username, password, db_name),
                            pool_pre_ping=True)
 
