@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""defines function that creates city model"""
+"""defines function that creates base model"""
 
 from sqlalchemy import Column, Integer, String, ForeignKey
 from sqlalchemy.ext.declarative import declarative_base
