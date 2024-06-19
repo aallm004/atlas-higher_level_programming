@@ -16,7 +16,7 @@ if __name__ == "__main__":
         f'mysql+mysqldb://{username}:{password}@localhose:3306/{dbase}'
     )
 
-    Base.metadata.create_all(engine)
+    Base.metadata.create_all(bind=engine)
 
     Session = sessionmaker(bind=engine)
 
