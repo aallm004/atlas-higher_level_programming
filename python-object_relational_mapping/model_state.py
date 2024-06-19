@@ -2,7 +2,7 @@
 """Class def of State and instance"""
 import sys
 from model_state import Base, State
-from sqlalchemy import create_engine
+from sqlalchemy import (create_engine)
 from sqlalchemy.orm import sessionmaker
 
 
@@ -18,4 +18,4 @@ if __name__ == "__main__":
         print("{}: {}".format(item.id, item.name))
 
     session.close()
-    
+
