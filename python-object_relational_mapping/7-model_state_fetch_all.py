@@ -12,14 +12,14 @@ if __name__ == "__main__":
     database = sys.argv[3]
 
     engine = create_engine("mysql://{username}:{password}@localhose:3306/{database}")
-    Base.metadata.bind = engine
+    Base.metadata.create_all(engine)
 
     Session = sessionmaker(bind=engine)
     session = Session()
 
-    states = session.query(State).order_by(State.id.asc()).all()
+    states = session.query(State).order_by(State.id).all()
     
-    for instance in session.query(State).order_by(State.id):
-        print('{0}: {1}'.format(instance.id, instance.name))
+    for row in states:
+        print(f"{row.id}: {row.name}")
 
-    session.close()
+    Session.close()
