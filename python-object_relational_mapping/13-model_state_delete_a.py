@@ -21,6 +21,7 @@ if __name__ == "__main__":
     for state in states_to_delete:
         session.delete(state)
 
+    session.commit()
     print("Deleted State objects successfully!")
 
     session.close()
