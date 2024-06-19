@@ -1,33 +1,20 @@
 #!/usr/bin/python3
-"""Script that lists all states from db"""
+"""Script that lists all states from the database hbtn_0e_0_usa"""
+
 
 import sys
 import MySQLdb
 
 
 if __name__ == "__main__":
-    # Get command-line arguments
-    username, password, db_name = sys.argv[1], sys.argv[2], sys.argv[3]
 
-    sql_code = "SELECT * FROM `states` ORDER BY `id`"
+    db = MySQLdb.connect(host="localhost", user = sys.argv[1], passwd = sys.argv[2], db = sys.argv[3])
 
-    # Connect to MySQL
-    db = MySQLdb.connect(host="localhost", port=3306,
-                         user=username, passwd=password, db=db_name)
+    cur = db.cursor()
 
-    # Create a cursor object
-    cursor = db.cursor()
+    cur.execute("SELECT id, name FROM states ORDER BY states.id ASC")
 
-    # Execute the query
-    cursor.execute(sql_code)
-
-    # Fetch all results
-    res = cursor.fetchall()
-
-    # Print the results
-    for row in res:
-        print(row)
-
-    # Close cursor and database connection
-    cursor.close()
-    db.close()
+    results = cur.fetchall()
+    
+    for state in results:
+        print(state)
