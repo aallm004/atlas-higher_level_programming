@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""Fetch and display City objects from the datebase hbtn..."""
+"""Fetch and display City objects from the datebase hbtn"""
 
 import sys
 from model_state import Base, State, City
