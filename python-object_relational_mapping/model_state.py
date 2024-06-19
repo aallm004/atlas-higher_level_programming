@@ -1,21 +1,13 @@
 #!/usr/bin/python3
-"""Class def of State and instance"""
-import sys
-from model_state import Base, State
-from sqlalchemy import (create_engine)
-from sqlalchemy.orm import sessionmaker
+"""defines function that creates base model"""
 
+from sqlalchemy import Column, Integer, String
+from sqlalchemy.ext.declarative import declarative_base
 
-if __name__ == "__main__":
-    """comment"""
-    eng = create_engine('mysql+mysqldb://{}:{}@localhose/{}'
-                        .format(sys.argv[1], sys.argv[2], sys.argv[3]),
-                        pool_pre_ping=True)
-    
-    Base.metadata.create_all(eng)
-    Session = sessionmaker(bind=eng)
-    session = Session()
-    for item in session.query(State).order_by(State.id):
-        print("{}: {}".format(item.id, item.name))
+Base = declarative_base()
 
-    session.close()
+class State(Base):
+    """Start of State Class"""
+    __tablename__ = "states"
+    id = Column(Integer, primary_key=True, nullable = False, autoincrement=True)
+    name = Column(String(128), nullable=False)
