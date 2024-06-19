@@ -7,6 +7,7 @@ from sqlalchemy.orm import relationship
 
 Base = declarative_base()
 
+
 class City(Base):
     """Start of City class"""
     __tablename__ = "cities"
