@@ -5,6 +5,6 @@ const firstArg = arg[0];
 
 if (firstArg === undefined) {
   console.log('No argument');
-} else {
-  console.log(firstArg);
+} else if ({
+  console.log("No argument");
 }
