@@ -1,6 +1,6 @@
 #!/usr/bin/node
-if (arg === undefined) {
+if (firstArg === undefined) {
     console.log("No argument");
 } else {
-    console.log(arg);
+    console.log(firstArg);
 }
