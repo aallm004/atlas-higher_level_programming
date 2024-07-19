@@ -1,5 +1,4 @@
 #!/usr/bin/node
-const x = process.argv[2];
 const myObject = {
   type: 'object',
   value: 12
