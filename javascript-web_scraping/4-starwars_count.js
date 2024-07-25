@@ -8,9 +8,10 @@ if (url !== undefined) {
     if (error) console.log(error);
 
     const data = JSON.parse(body).results;
-
-    const movie = data.filter(x => x.characters.includes(
-      'https://swapi-api.hbtn.io/api/people/18/'));
-    console.log(movie.length);
+    let count = 0;
+    const movie = data.filter(x => x.characters.forEach(element => {
+    if (element.indexOf('18')> 0) count++;
+    }));
+    console.log(count);
   });
 }
