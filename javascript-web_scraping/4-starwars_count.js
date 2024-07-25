@@ -9,7 +9,7 @@ if (url !== undefined) {
 
     const data = JSON.parse(body).results;
     let count = 0;
-    const movie = data.filter(x => x.characters.forEach(element => {
+    data.filter(x => x.characters.forEach(element => {
       if (element.indexOf('18') > 0) count++;
     }));
     console.log(count);
